@@ -1,22 +1,24 @@
 # A multitask teacher-student framework for perceptual audio quality assessment
 
 ## Introduction
+This is the complementary repository for the following publication:
 
-This is the complementary repository for the following submission:
-
-"A multitask teacher-student framework for perceptual audio quality assessment"
+```
+Chih-Wei Wu, Phillip A. Williams, William Wolcott, 
+"A multitask teacher-student framework for perceptual audio quality assessment",
+in Proceedings of European Signal Processing Conference (EUSIPCO), 2021
+```
 
 Specifically, this repository includes:
 
-1. Additional metrics
+1. Additional metrics (Please see the sections below)
 
-2. Additional plots/figures
+2. Additional plots/figures (Please see the sections below)
 
-3. Software implementation and pretrained model for the proposed system (to be released later)
+3. Software implementation and pretrained model for the proposed system (Please see [here](./code/README.md) for more details.)
 
 ## Additional Metrics
-
-Root mean squared error (RMSE) was computed as a secondrary metric but not shown in the manuscript due to the space constraints. 
+Root mean square error (RMSE) was computed as a secondrary metric but not shown in the manuscript due to the space constraints. 
 
 |        Systems  |      |          |   Test Datasets    |          |   |   Averaged RMSE     |      
 |:---------------:|:-------------:|:--------:|:----------:|:-------:|:-----:  |:-------------:|
@@ -38,7 +40,6 @@ Root mean squared error (RMSE) was computed as a secondrary metric but not shown
 |    MTL-median   |     0.577     |   0.758  |    0.721   | 0.785   | 0.284   |     0.625     |
 
 ## Additional Plots/Figures
-
 The following scatter plots show the model predictions v.s. human ground truth on the combined proprietary (i.e., NLow + NHigh) datasets. Here we compare the best performing teacher system (ViSQOLAudio) and the best performing student system (MTL-gmean):
 
 ![](./figs/visqolaudio_scatter.png "Fig.1.")
@@ -49,8 +50,20 @@ Fig. 1. ViSQOLAudio on {NLow + NHigh}
 
 Fig. 2. MTL-gmean on {NLow + NHigh}
 
-## Contact
+## Citing
+To cite this work, please use the following:
 
+```
+@inproceedings{
+  wu_2021,
+  title={A multitask teacher-student framework for perceptual audio quality assessment},
+  author={Wu, Chih-Wei and Williams, Phillip A and Wolcott, William},
+  booktitle={European Signal Processing Conference (EUSIPCO)},
+  year={2021}
+}
+```
+
+## Contact
 Chih-Wei Wu \
 cwu307[at]gmail.com
 
