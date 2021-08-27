@@ -53,9 +53,9 @@ To confirm the installation of the package, please try the following commands:
 a successful execution of the above command should return:
 ```
 =============================================================
-SMAQ score = 3.1054091453552246
-raw score = [[0.62472284 0.42117754 0.5053512  0.57724494]]
-raw features = [ 0.84460003 -8.63695857  0.86474614  0.77688329]
+SMAQ score = 3.5690267086029053
+raw score = [[0.7432404  0.5091952  0.7000091  0.64226925]]
+raw features = [  0.89797038 -13.11266633   0.93788654   0.86328718]
 =============================================================
 ```
 
