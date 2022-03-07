@@ -1,7 +1,7 @@
 # A multitask teacher-student framework for perceptual audio quality assessment
 
 ## Introduction
-This is the complementary repository for the following publication:
+This is the complementary repository for the following [publication](https://eurasip.org/Proceedings/Eusipco/Eusipco2021/pdfs/0000396.pdf):
 
 ```
 Chih-Wei Wu, Phillip A. Williams, William Wolcott, 
