@@ -147,8 +147,8 @@ class CepcorrFeatureExtractor(BaseFeatureExtractor):
         """
         assert(len(self.m_ref_sig) == len(self.m_tar_sig))
         # ==== resampling (already aligned broadband signals)
-        self.m_ref_sig_24 = lr.core.resample(self.m_ref_sig, self.m_fs, self.m_fs_24)
-        self.m_tar_sig_24 = lr.core.resample(self.m_tar_sig, self.m_fs, self.m_fs_24)
+        self.m_ref_sig_24 = lr.core.resample(self.m_ref_sig, orig_sr=self.m_fs, target_sr=self.m_fs_24)
+        self.m_tar_sig_24 = lr.core.resample(self.m_tar_sig, orig_sr=self.m_fs, target_sr=self.m_fs_24)
         # ==== NAL-R EQ
         # bypass this step because we do not focus on hearing loss (HL) simulation
         # when no HL is applied, NAL-R filter is just a delay oSSf 140 samples
@@ -676,10 +676,10 @@ class CepcorrFeatureExtractor(BaseFeatureExtractor):
         if original_fs == target_fs:  # do nothing
             sig_24 = sig
         elif original_fs < target_fs:  # upsampling
-            sig_24 = lr.core.resample(sig, original_fs, target_fs)
+            sig_24 = lr.core.resample(sig, orig_sr=original_fs, target_sr=target_fs)
             sig_24 = CepcorrFeatureExtractor._match_rms_y_to_x(sig, sig_24)
         else:  # downsampling
-            sig_24 = lr.core.resample(sig, original_fs, target_fs)
+            sig_24 = lr.core.resample(sig, orig_sr=original_fs, target_sr=target_fs)
             [b_in, a_in] = sigs.cheby2(7, 30, 21/original_fs_khz)
             sig_filt = sigs.lfilter(b_in, a_in, sig)
             [b_out, a_out] = sigs.cheby2(7, 30, 21/target_fs_khz)
@@ -1321,7 +1321,7 @@ class PsmtFeatureExtractor(BaseFeatureExtractor):
         num_bands = np.size(sig_mat, 0)
         sig_resamp = []
         for i in range(0, num_bands):
-            sig_resamp.append(lr.core.resample(sig_mat[i, :], original_fs, target_fs, res_type='kaiser_fast'))
+            sig_resamp.append(lr.core.resample(sig_mat[i, :], orig_sr=original_fs, target_sr=target_fs, res_type='kaiser_fast'))
         return np.asarray(sig_resamp)
 
     @staticmethod

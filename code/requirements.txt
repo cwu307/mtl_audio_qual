@@ -1,12 +1,11 @@
 click
 runez
-librosa==0.7.2
-numpy<1.19.0
-scipy==1.4.1
-numba==0.48.0
+librosa
+numpy
+scipy
+numba
 pyACA
 PySoundFile
-scikit-learn==0.20.3
+scikit-learn
 tensorflow
-tensorflow-cpu
 setuptools-scm
