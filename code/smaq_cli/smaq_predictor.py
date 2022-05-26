@@ -11,13 +11,13 @@ import os
 import time
 import warnings
 
+import joblib
 import librosa as lr
 import numpy as np
 import pkg_resources
 import runez
 import soundfile as sf
 from scipy.stats import gmean
-from sklearn.externals import joblib
 from tensorflow.keras.models import load_model
 
 from smaq_cli.feature_extractor import SmaqFeatureExtractor
