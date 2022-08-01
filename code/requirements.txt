@@ -9,3 +9,5 @@ PySoundFile
 scikit-learn
 tensorflow
 setuptools-scm
+# pinned
+resampy==0.2.2
