@@ -6,8 +6,8 @@ scipy
 numba
 pyACA
 PySoundFile
-scikit-learn
-tensorflow
+tensorflow-cpu
 setuptools-scm
 # pinned
+scikit-learn==1.0.2
 resampy==0.2.2
