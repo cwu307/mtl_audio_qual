@@ -6,6 +6,7 @@ scipy
 numba
 pyACA
 PySoundFile
+tensorflow
 tensorflow-cpu
 setuptools-scm
 # pinned
