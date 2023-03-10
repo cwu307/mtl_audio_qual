@@ -18,11 +18,12 @@ import pkg_resources
 import runez
 import soundfile as sf
 from scipy.stats import gmean
-from tensorflow.keras.models import load_model
 
 from smaq_cli.feature_extractor import SmaqFeatureExtractor
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # reduce tf warning messages
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+from tensorflow.keras.models import load_model  # noqa
 
 
 class SmaqPredictor:
